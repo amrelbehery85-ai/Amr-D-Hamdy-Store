@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <h1>Amr D Hamdy Store 🛒</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Amr D Hamdy Store</h2>
+            <p>Discover the best products at the best prices.</p>
+            <button id="btn">Shop Now</button>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Our Products</h2>
+        <input type="text" id="search" class="search-box" placeholder="ابحث عن منتج...">
+        <div class="products-container" id="products-container"></div>
+    </section>
+
+    <section class="cart-section" id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            Total: <span id="cart-total">0</span> EGP
+        </div>
+    </section>
+
+    <section class="auth-section" id="register">
+        <h2>Create Account</h2>
+        <form id="register-form">
+            <input type="text" id="register-name" placeholder="Full Name" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
